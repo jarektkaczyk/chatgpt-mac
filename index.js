@@ -1,7 +1,6 @@
 require("update-electron-app")();
 
 const { menubar } = require("menubar");
-const Nucleus = require("nucleus-analytics");
 
 const path = require("path");
 const {
@@ -19,8 +18,6 @@ const image = nativeImage.createFromPath(
 );
 
 app.on("ready", () => {
-  Nucleus.init("638d9ccf4a5ed2dae43ce122");
-
   const tray = new Tray(image);
 
   const mb = menubar({
